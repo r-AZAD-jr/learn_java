@@ -2,15 +2,21 @@ package com.learnjava.organized;
 
 public class Main {
     public static void main(String[] args) {
-        byte byte8bit = 100;
-        short short16bit = 1000;
         int int32bit = 1;
-        long long64bit = 1L;
+        System.out.println("Prefix : " + ++int32bit);
+        int32bit = 1;
+        System.out.println("Postfix : " + int32bit++);
 
-        float float32bit = 0.01f;
-        double double64bit = 0.01;
-        char charOneLetter = 'U';
-        boolean boolTrue = true;
-        boolTrue = false;
+        int32bit = 1;
+        /**
+         * Other Compound Operator
+         * +=
+         * -=
+         * *=
+         * /=
+         * %=
+         * */
+        int32bit += 10;
+        System.out.println("Compound : " + int32bit);
     }
 }
