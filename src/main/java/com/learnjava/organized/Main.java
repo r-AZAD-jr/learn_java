@@ -21,7 +21,7 @@ public class Main {
 
         double[] doubleArray = {10.1d,20.2d,30.3d};
         System.out.print("Array : ");
-        for(Object Item : doubleArray)
+        for(var Item : doubleArray)
             System.out.print(Item + " ");
     }
 }
