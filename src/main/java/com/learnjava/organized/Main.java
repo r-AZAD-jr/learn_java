@@ -2,26 +2,17 @@ package com.learnjava.organized;
 
 public class Main {
     public static void main(String[] args) {
+        if(args.length > 0)
+            printArgs(args);
+    }
 
-        byte counter = 1;
-        while (counter < 10) {
-            System.out.println("While Counter : " + counter);
-            counter *= 2;
-        }
+    private static void printArgs(String[] args) {
+        char firstArgs = args[0].charAt(0);
+        double secondArgs = Double.parseDouble(args[1]);
+        double thirdArgs = Double.parseDouble(args[2]);
 
-        counter = 1;
-        do {
-            System.out.println("Do While Counter : " + counter);
-            counter *= 2;
-        }
-        while (counter <= 1);
-
-        for (int i = 1; i < 10; i *= 2)
-            System.out.println("For loop I : " + i);
-
-        double[] doubleArray = {10.1d,20.2d,30.3d};
-        System.out.print("Array : ");
-        for(var Item : doubleArray)
-            System.out.print(Item + " ");
+        System.out.println("First Args : " + firstArgs);
+        System.out.println("Second Args : " + secondArgs);
+        System.out.println("third Args : " + thirdArgs);
     }
 }
