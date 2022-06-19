@@ -7,9 +7,9 @@ public class Main {
     }
 
     private static void printArgs(String[] args) {
-        char firstArgs = args[0].charAt(0);
-        double secondArgs = Double.parseDouble(args[1]);
-        double thirdArgs = Double.parseDouble(args[2]);
+        char firstArgs      =   args[0].charAt(0);
+        double secondArgs   =   Double.parseDouble(args[1]);
+        double thirdArgs    =   Double.parseDouble(args[2]);
 
         System.out.println("First Args : " + firstArgs);
         System.out.println("Second Args : " + secondArgs);
