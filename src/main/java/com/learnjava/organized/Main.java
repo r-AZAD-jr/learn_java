@@ -2,17 +2,20 @@ package com.learnjava.organized;
 
 public class Main {
     public static void main(String[] args) {
-        if(args.length > 0)
-            printArgs(args);
-    }
 
-    private static void printArgs(String[] args) {
-        char firstArgs      =   args[0].charAt(0);
-        double secondArgs   =   Double.parseDouble(args[1]);
-        double thirdArgs    =   Double.parseDouble(args[2]);
+        String firstString  = "piano man";
+        String secondString = "piano";
+        String thirdString = secondString + " man";
 
-        System.out.println("First Args : " + firstArgs);
-        System.out.println("Second Args : " + secondArgs);
-        System.out.println("third Args : " + thirdArgs);
+        boolean result1 = firstString == thirdString;
+        boolean result2 = firstString.equals(thirdString);
+        boolean result3 = firstString.intern() == thirdString.intern();
+
+        System.out.println( "firstString     : " + System.identityHashCode(firstString) );
+        System.out.println( "thirdString     : " + System.identityHashCode(thirdString) );
+
+        System.out.println( "Equality    : " + result1 );
+        System.out.println( "Equal       : " + result2 );
+        System.out.println( "Intern      : " + result3 );
     }
 }
