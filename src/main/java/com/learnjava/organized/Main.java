@@ -1,21 +1,33 @@
 package com.learnjava.organized;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        handleWorkFlow(args);
+    }
 
-        String firstString  = "piano man";
-        String secondString = "piano";
-        String thirdString = secondString + " man";
+    private static void handleWorkFlow(String[] args) {
+        int result = args.length > 0 ? handleArgs(args[0]) : handleUserInput();
+        System.out.println("Number is : " + result);
+    }
 
-        boolean result1 = firstString == thirdString;
-        boolean result2 = firstString.equals(thirdString);
-        boolean result3 = firstString.intern() == thirdString.intern();
+    private static int handleUserInput() {
+        Scanner scannerObj = new Scanner(System.in);
+        System.out.print( "Enter a Number : " );
+        return Integer.parseInt(scannerObj.nextLine());
+    }
 
-        System.out.println( "firstString     : " + System.identityHashCode(firstString) );
-        System.out.println( "thirdString     : " + System.identityHashCode(thirdString) );
+    private static int handleArgs(String args) {
+        String[] stringArray = {
+                "zero",
+                "one",
+                "two",
+                "three"
+        };
 
-        System.out.println( "Equality    : " + result1 );
-        System.out.println( "Equal       : " + result2 );
-        System.out.println( "Intern      : " + result3 );
+        var listOfStringArray = Arrays.asList(stringArray);
+        return listOfStringArray.contains(args) ? listOfStringArray.indexOf(args) : -1;
     }
 }
