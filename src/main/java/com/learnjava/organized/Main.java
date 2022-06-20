@@ -6,18 +6,11 @@ public class Main {
     }
 
     private static void handleFlight() {
-        Flight[] referenceFlight = new Flight[2];
-
-        if (referenceFlight[0] == null)
-            referenceFlight[0] = new Flight();
-        if (referenceFlight[1] == null)
-            referenceFlight[1] = new Flight();
-
-        referenceFlight[0].addPassenger(2);
-        System.out.println("Current Number of Passenger on flight 1 : " + referenceFlight[0].getPassenger());
-
-        referenceFlight[1].addPassenger(190);
-        System.out.println("Current Number of Passenger on flight 2 : " + referenceFlight[1].getPassenger());
+        Flight fxd1 = new Flight();
+        fxd1.addPassenger(1,0);
+        fxd1.addPassenger(2,1);
+        fxd1.addPassenger(3,0);
+        fxd1.printFlightInfo();
     }
 
 }
