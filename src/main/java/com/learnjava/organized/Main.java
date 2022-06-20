@@ -7,8 +7,11 @@ public class Main {
 
     private static void handleFlight() {
         Flight[] referenceFlight = new Flight[2];
-        referenceFlight[0] = new Flight();
-        referenceFlight[1] = new Flight();
+
+        if (referenceFlight[0] == null)
+            referenceFlight[0] = new Flight();
+        if (referenceFlight[1] == null)
+            referenceFlight[1] = new Flight();
 
         referenceFlight[0].addPassenger(2);
         System.out.println("Current Number of Passenger on flight 1 : " + referenceFlight[0].getPassenger());
