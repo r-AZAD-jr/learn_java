@@ -12,5 +12,4 @@ public class Main {
         fxd1.addPassenger(3,0);
         fxd1.printFlightInfo();
     }
-
 }

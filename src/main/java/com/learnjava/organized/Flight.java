@@ -5,10 +5,15 @@ public class Flight {
     Person[] objPerson;
     private int seats;
 
-    public Flight() {
+    {
+        System.out.println("Executing initialization block !!");
         passenger = 100;
         objPerson = new Person[this.passenger];
         seats = 0;
+    }
+
+    public Flight() {
+        System.out.println("Executing constructor !!");
     }
 
     public void addPassenger(int newPassenger, int passengerClass) {
