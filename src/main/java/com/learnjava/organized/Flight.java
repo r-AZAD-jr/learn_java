@@ -2,33 +2,41 @@ package com.learnjava.organized;
 
 public class Flight {
     private int passenger;
-    Person[] objPerson;
-    private int seats;
+    private static int seats;
+
+    public int getSeats()
+    {
+        return seats;
+    }
+    public void setSeats(int seats)
+    {
+        /**
+         * instance member can access instance and static member.
+         * */
+        Flight.seats = seats;
+    }
+
+    public static void resetSeats()
+    {
+        seats = 0;
+        /**
+         * passenger = 0; will generate error, cause static method can only access static member
+         * */
+    }
 
     {
-        System.out.println("Executing initialization block !!");
-        passenger = 100;
-        objPerson = new Person[this.passenger];
+        passenger = 10;
         seats = 0;
     }
 
     public Flight() {
-        System.out.println("Executing constructor !!");
     }
 
-    public void addPassenger(int newPassenger, int passengerClass) {
-        if (this.passenger <= this.passenger + newPassenger) {
-            if (newPassenger == 1) {
-                objPerson[this.seats] = new Person(passengerClass);
-            } else {
-                for (int i = 0; i < newPassenger; ++i) {
-                    objPerson[this.seats + i] = new Person(passengerClass);
-                }
-            }
-            this.seats += newPassenger;
-        } else {
+    public void addPassenger(int newPassenger) {
+        if (passenger <= passenger + newPassenger)
+            seats += newPassenger;
+        else
             handleWarning();
-        }
     }
 
     private void handleWarning() {
@@ -36,10 +44,7 @@ public class Flight {
     }
 
     public void printFlightInfo() {
-        System.out.println("Number of Passenger : " + this.passenger);
-        for (short i = 0; i < this.seats; ++i) {
-            System.out.println("Passenger Number : " + i + " will spend per bag : " + objPerson[i].getPerBagFee() + " !!");
-        }
+        System.out.println("Number of passenger        : " + seats);
+        System.out.println("Number of seats available  : " + (passenger-seats));
     }
-
 }

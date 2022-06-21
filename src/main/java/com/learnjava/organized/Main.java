@@ -7,9 +7,8 @@ public class Main {
 
     private static void handleFlight() {
         Flight fxd1 = new Flight();
-        fxd1.addPassenger(1,0);
-        fxd1.addPassenger(2,1);
-        fxd1.addPassenger(3,0);
+        fxd1.addPassenger(3);
+        fxd1.setSeats(7);
         fxd1.printFlightInfo();
     }
 }
