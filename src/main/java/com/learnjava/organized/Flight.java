@@ -2,41 +2,19 @@ package com.learnjava.organized;
 
 public class Flight {
     private int passenger;
-    private static int seats;
+    private int seats;
 
-    public int getSeats() {
+    public int getSeats()
+    {
         return seats;
     }
-
-    public void setSeats(int seats) {
-        /**
-         * instance member can access instance and static member.
-         * */
-        Flight.seats = seats;
-    }
-
-    public static void resetSeats() {
-        seats = 0;
-        /**
-         * passenger = 0; will generate error, cause static method can only access static member
-         * */
-    }
-
-    /**
-     * Static Initialization Block is used to initialize
-     * Static member of class.
-     * */
-    static {
-        System.out.println("Initializing block of Static field !!");
-        seats = 0;
-    }
-
+    public void setSeats(int seats)
     {
-        System.out.println("Initializing block instance feild !!");
-        passenger = 10;
+        this.seats=seats;
     }
 
     public Flight() {
+        passenger = 10;
     }
 
     public void addPassenger(int newPassenger) {
