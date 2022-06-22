@@ -1,14 +1,13 @@
 package com.learnjava.organized;
-
-public class Flight {
-
-    /**
-     * Because getFlightName() is marked final,
-     * any class inherit Flight will not be
-     * able to override this method.
-     * */
-    public final String getFlightName()
-    {
-        return "Star Dust";
-    }
+/**
+ * Flight is an abstract class,
+ * any class extends this class
+ * must provide implementation
+ * for abstract members.
+ *
+ * Note : abstract class does allow
+ * to create an instance of the class.
+ * */
+public abstract class Flight {
+        public abstract String getFlightName();
 }

@@ -1,10 +1,12 @@
 package com.learnjava.organized;
 
-
-/**
- * Because this class marked final, it is
- * not allowed to be inherited by another
- * class.
- * */
 public final class CargoFlight extends Flight{
+    /**
+     * Because CargoFlight extends Flights
+     * it provides an implementation for getFlightName()
+     * */
+    @Override
+    public String getFlightName() {
+        return "Varig Flight 967";
+    }
 }
