@@ -9,8 +9,8 @@ public class Main {
         CargoFlight objCargoFlight = new CargoFlight();
         Flight objFlight = new CargoFlight();
 
-        System.out.println("Cargo Flight Passenger  : " + objCargoFlight.passenger + " !!");
-        System.out.println("Flight Flight Passenger : " + objFlight.passenger + " !!");
+        System.out.println("Cargo Flight Passenger  : " + objCargoFlight.getPassenger() + " !!");
+        System.out.println("Flight Flight Passenger : " + objFlight.getPassenger() + " !!");
 
         /**
          * Field Hiding
@@ -18,7 +18,7 @@ public class Main {
          * 1. If base and derived class both has same filed.
          * The field is the derived class will hide the base class
          * filed. From line 12 and 13 it seems ok, but it is really
-         * not. Line 24 and 25 shows the actual problem. Because
+         * not. Line 39 and 40 shows the actual problem. Because
          * the method implementation is in base class it will take
          * field of the base class.
          *
@@ -27,7 +27,16 @@ public class Main {
          *
          * Note : Fields(variables) in class are reference specific.
          * */
-        objCargoFlight.addPassenger(3);
-        objFlight.addPassenger(5);
+
+        /**
+         * Line 39 and 40 both calls the addPassenger in base class.
+         * Because methods as instance specific in bot case it prints
+         * 10.
+         *
+         * Note : Methods are Instance specific.
+         * */
+
+        objCargoFlight.addPassenger();
+        objFlight.addPassenger();
     }
 }

@@ -1,9 +1,10 @@
 package com.learnjava.organized;
 
 public class CargoFlight extends Flight{
-    public int passenger;
+    public int passenger = 10;
 
+    public int getPassenger()
     {
-        passenger = 10;
+        return 10;
     }
 }
