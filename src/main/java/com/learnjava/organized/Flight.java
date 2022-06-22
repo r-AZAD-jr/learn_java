@@ -2,6 +2,7 @@ package com.learnjava.organized;
 
 public class Flight {
     public int passenger = 100;
+
     public int getPassenger() {
         return passenger;
     }
