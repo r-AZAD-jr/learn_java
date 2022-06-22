@@ -5,6 +5,6 @@ public class CargoFlight extends Flight{
 
     public int getPassenger()
     {
-        return 10;
+        return passenger;
     }
 }
