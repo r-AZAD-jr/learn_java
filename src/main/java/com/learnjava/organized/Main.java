@@ -6,18 +6,19 @@ public class Main {
     }
 
     private static void handleFlight() {
-        int classLevel          =   9;
-        String firstStudent     =   "Billy";
-        String secondStudent    =   "Joel";
-        print(classLevel, firstStudent, secondStudent);
-    }
+        CargoFlight objCargoFlight = new CargoFlight();
 
-    /**
-     * Only the last variable is allowed to have variable parameters.
-     * */
-    private static void print(int classLevel, String... studentName) {
-        System.out.println("Class Level : " + classLevel + " !!");
-        for(short i = 0; i < studentName.length; ++i)
-            System.out.format("Student %d, Name %s !!\n", i, studentName[i]);
+        /**
+         * Calls addCargo in CargoFlight class
+         * with object of CargoFlight class
+         * */
+        objCargoFlight.addPackage(5d, 2d, 5d);
+        /**
+         * Calls addPassenger in Flight class
+         * with object of CargoFlight class
+         *  */
+        objCargoFlight.addPassenger(3);
+
+        objCargoFlight.printCargoFlightInfo();
     }
 }
