@@ -1,7 +1,7 @@
 package com.learnjava.organized;
 
 public class Flight {
-    private int passenger;
+    public int passenger;
     private int seats;
 
     public Flight() {
@@ -10,6 +10,7 @@ public class Flight {
     }
 
     public void addPassenger(int newPassenger) {
+        System.out.println("Number of Passenger : " + passenger + " !!");
         if (passenger <= passenger + newPassenger)
             this.seats += newPassenger;
         else
