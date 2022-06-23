@@ -1,6 +1,6 @@
 package com.learnjava.organized;
 
-public class Flight implements Comparable {
+public class Flight implements Comparable<Flight>{
     private double flightDelayTime;
     private int flightPriority;
     private String flightName;
@@ -25,11 +25,10 @@ public class Flight implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        Flight objFlight = (Flight) o;
-        int orderResult = flightPriority - objFlight.flightPriority;
+    public int compareTo(Flight o) {
+        int orderResult = flightPriority - o.flightPriority;
         if (orderResult == 0)
-            orderResult = (int)(objFlight.flightDelayTime - flightDelayTime);
+            orderResult = (int)(o.flightDelayTime - flightDelayTime);
         return orderResult;
     }
 }
