@@ -1,47 +1,24 @@
 package com.learnjava.organized;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         handleFlight();
     }
-
     private static void handleFlight() {
-        FlightCrew objEnumPilot = FlightCrew.PILOT;
-        FlightCrew objEnumCoPilot = FlightCrew.COPILOT;
+        Flight[] objFlightArray = {
+                new Flight(10.5d , 1, "Air Force One"),
+                new Flight(11.5d , 2, "Air Force One Backup 1"),
+                new Flight(13.5d , 2, "Air Force One Backup 2"),
+                new Flight(15.5d , 2, "Air Force One Backup 3"),
+                new Flight(12.5d , 4, "Air Force One Decoy 1"),
+                new Flight(10d   , 5, "Air Force One Decoy 2")
+        };
 
-        System.out.println("Object Enum of Pilot    : " + objEnumPilot);
-        System.out.println("Object Enum of CoPilot  : " + objEnumCoPilot);
-
-        /**
-         * If left >right : 0
-         * If left >right : 1
-         * If left >right : -1
-         * */
-        int result = objEnumCoPilot.compareTo(objEnumCoPilot);
-        System.out.println("Is Pilot is bigger then CoPilot : " + result + " !!");
-
-        int pilotVal = objEnumCoPilot.getField();
-        System.out.println("Pilot enum Value : " + pilotVal + " !!");
-
-        compareJob(objEnumPilot);
-    }
-
-    private static void compareJob(FlightCrew objEnum) {
-        /**
-         * No need to qualify with complete name
-         * Eg : FlightCrew.CREW is not necessary.
-         * only CREW is enough.
-         * */
-        switch (objEnum) {
-            case CREW:
-                System.out.println("Job of Crew is to maintain the plain !!");
-                break;
-            case PILOT:
-                System.out.println("Job of Pilot is Fly the Plain !!");
-                break;
-            case COPILOT:
-                System.out.println("Job of CoPilot is to help Fly the Plain !!");
-                break;
-        }
+        Arrays.sort(objFlightArray);
+        for (var obj : objFlightArray)
+            System.out.format("Flight Name : %s, Priority : %d, Waiting Time : %f !!\n",
+                    obj.getFlightName(), obj.getFlightPriority(), obj.getFlightDelayTime() );
     }
 }
