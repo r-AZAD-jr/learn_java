@@ -14,7 +14,7 @@ public class Main {
                 }
         );
 
-        String command = "Power 2 3";
+        String command = "add 2 3";
         var result = objHandleCalculation.calculate(command);
         System.out.println("Calculated Result : " + result + " !!");
     }

@@ -6,4 +6,8 @@ public interface MathProcessing {
     boolean matchOperation(String operationType);
 
     double calculate(double leftVal, double rightVal);
+
+    default String getCommandInfo() {
+        return null;
+    }
 }
