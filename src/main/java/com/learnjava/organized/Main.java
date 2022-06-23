@@ -4,13 +4,14 @@ public class Main {
     public static void main(String[] args) {
         handleFlight();
     }
+
     private static void handleFlight() {
 
         HandleCalculation objHandleCalculation = new HandleCalculation(
-          new MathProcessing[]{
-                  new Add(),
-                  new Power()
-          }
+                new MathProcessing[]{
+                        new Add(),
+                        new Power()
+                }
         );
 
         String command = "Power 2 3";

@@ -1,6 +1,6 @@
 package com.learnjava.organized;
 
-public class Power implements MathProcessing{
+public class Power implements MathProcessing {
 
     @Override
     public boolean matchOperation(String operationType) {
@@ -9,6 +9,6 @@ public class Power implements MathProcessing{
 
     @Override
     public double calculate(double leftVal, double rightVal) {
-        return Math.pow(leftVal,rightVal);
+        return Math.pow(leftVal, rightVal);
     }
 }
