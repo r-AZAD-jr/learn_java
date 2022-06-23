@@ -14,11 +14,18 @@ public class Main {
                 new Flight(15.5d , 2, "Air Force One Backup 3"),
                 new Flight(12.5d , 4, "Air Force One Decoy 1"),
                 new Flight(10d   , 5, "Air Force One Decoy 2")
-        };
+        } ;
 
         Arrays.sort(objFlightArray);
         for (var obj : objFlightArray)
             System.out.format("Flight Name : %s, Priority : %d, Waiting Time : %f !!\n",
                     obj.getFlightName(), obj.getFlightPriority(), obj.getFlightDelayTime() );
+
+        objFlightArray[0].addOnePassenger("Barack Obama");
+        objFlightArray[0].addOnePassenger("Donald Trump");
+        objFlightArray[0].addOnePassenger("Joe Biden");
+
+        for(var Item : objFlightArray[0])
+            System.out.println("Air Force One Passenger Name : " + Item.getPassengerName() + " !!");
     }
 }

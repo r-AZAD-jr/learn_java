@@ -1,6 +1,11 @@
 package com.learnjava.organized;
 
-public class Flight implements Comparable<Flight>{
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+
+public class Flight implements Comparable<Flight>, Iterable<Passenger> {
+    private ArrayList<Passenger> passengerList = new ArrayList<>();
     private double flightDelayTime;
     private int flightPriority;
     private String flightName;
@@ -30,5 +35,13 @@ public class Flight implements Comparable<Flight>{
         if (orderResult == 0)
             orderResult = (int)(o.flightDelayTime - flightDelayTime);
         return orderResult;
+    }
+
+    @Override
+    public Iterator<Passenger> iterator() {
+        return passengerList.iterator();
+    }
+    public void addOnePassenger(String passengerName) {
+        passengerList.add(new Passenger(passengerName));
     }
 }
