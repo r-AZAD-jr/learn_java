@@ -13,5 +13,13 @@ public class Main {
 
         Passenger objPassenger = new Passenger();
         System.out.println("Top Add : " + objPassenger.getTopPrice() + " !!");
+
+        Flight objFlight = new Flight();
+        objFlight.addNewPassenger("Mark", 3, 600);
+        objFlight.addNewPassenger("Mat", 2, 100);
+        objFlight.addNewPassenger("Missy", 1, 10);
+        objFlight.addNewPassenger("Richard", 2, 200);
+        for (var Item : objFlight.getSortedPassengerList())
+            System.out.format("Name : %s, Level : %d, Member for : %d !!\n", Item.getName(), Item.getUserLevel(), Item.getMemberOfDays());
     }
 }
