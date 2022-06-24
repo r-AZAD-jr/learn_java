@@ -10,5 +10,8 @@ public class Main {
         Passenger.Reward objReward = new Passenger.Reward();
         objReward.userLevel = 3;
         System.out.println("User Level : " + objReward.userLevel + " !!");
+
+        Passenger objPassenger = new Passenger();
+        System.out.println("Top Add : " + objPassenger.getTopPrice() + " !!");
     }
 }

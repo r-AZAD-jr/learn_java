@@ -26,4 +26,24 @@ public class Passenger {
         public int userLevel;
     }
 
+    /**
+     * This is an inner class
+     * object creation is
+     * directly associated with
+     * it's enclosing class.
+     *
+     * Note inner class does not have static keyword
+     * */
+    private class Advert{
+        private String recentAdvertisements = "top price";
+        public String getRecentAdvertisements() {
+            return recentAdvertisements;
+        }
+    }
+    public String getTopPrice()
+    {
+        Advert objAdvert = new Advert();
+        return objAdvert.getRecentAdvertisements();
+    }
+
 }
