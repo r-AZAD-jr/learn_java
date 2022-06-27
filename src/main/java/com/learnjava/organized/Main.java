@@ -1,12 +1,12 @@
 package com.learnjava.organized;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
         handleFlight();
     }
-
     private static void handleFlight() {
         Map<Integer, Passenger> objMap = new HashMap<>();
 
@@ -17,7 +17,7 @@ public class Main {
 
     objMap.forEach((id, value) ->
     {
-        System.out.format("ID : %d, Name : %s !!\n", id, value.getName());
+        System.out.format("ID : %d, Name : %s !!\n", id, value.getPassengerName());
     });
     }
 }
